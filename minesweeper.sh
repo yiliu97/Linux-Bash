@@ -222,7 +222,8 @@ open_cell()
 				local coord_tmp=0
 				#calculate the coordinate
 				coord_tmp=$(((10*i)+j))
-				if [[ "${shadow[$coord_tmp]}" -eq 1 ]] && [[ "${mines[$coord_tmp]}" -eq 0 ]];then
+				#if the cell has not been opened
+				if [[ "${shadow[$coord_tmp]}" -eq 1 ]];then
 					open_cell $coord_tmp
 				fi
 			done
