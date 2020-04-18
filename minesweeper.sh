@@ -341,7 +341,9 @@ init_game
 
 while true;do
 
+echo "Hint: To choose column- a, row- 0, give input - a0"
 read -p "enter the coordinates: " coord_in
 convert_coordinates
+
 done
 
